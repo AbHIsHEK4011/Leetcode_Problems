@@ -4,4 +4,7 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
-        return '01' not in s
+        for i in range(0, len(s)-1):
+            if s[i] == '0' and s[i+1] == '1':
+                return False
+        return True
